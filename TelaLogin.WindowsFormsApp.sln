@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelaLogin.WindowsFormsApp", "TelaLogin.WindowsFormsApp\TelaLogin.WindowsFormsApp.csproj", "{B9B9B7CE-F818-4390-ABAA-8C9CCCBA1114}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9B9B7CE-F818-4390-ABAA-8C9CCCBA1114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B9B7CE-F818-4390-ABAA-8C9CCCBA1114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B9B7CE-F818-4390-ABAA-8C9CCCBA1114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B9B7CE-F818-4390-ABAA-8C9CCCBA1114}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {649C237C-043F-4594-8C76-D50E9D8EFD10}
+	EndGlobalSection
+EndGlobal
