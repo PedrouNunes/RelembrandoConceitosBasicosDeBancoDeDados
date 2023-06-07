@@ -13,6 +13,7 @@ namespace TelaLogin.WindowsFormsApp
 {
     public partial class TelaLogin : Form
     {
+        public string nomeLogin;
         public TelaLogin()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace TelaLogin.WindowsFormsApp
             SqlConnection conexao = new SqlConnection(connectionString);
 
             string usuario = txtUsuario.Text;
+            nomeLogin = usuario;
             string senha = txtSenha.Text;
 
             try
@@ -40,8 +42,8 @@ namespace TelaLogin.WindowsFormsApp
 
                 if (resultado == 1)
                 {
-                    TelaRequisitos telaRequisitos = new TelaRequisitos();
-                    telaRequisitos.Show();
+                    PaginaInicial paginaInicial = new PaginaInicial(nomeLogin);
+                    paginaInicial.Show();
                     this.Hide();
                 }
                 else
@@ -62,7 +64,7 @@ namespace TelaLogin.WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TelaRequisitos telaRequisitos = new TelaRequisitos();
+            TelaCadastro telaRequisitos = new TelaCadastro();
             telaRequisitos.Show();
             this.Hide();
         }

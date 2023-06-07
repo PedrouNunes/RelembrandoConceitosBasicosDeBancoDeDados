@@ -1,6 +1,6 @@
 ﻿namespace TelaLogin.WindowsFormsApp
 {
-    partial class TelaRequisitos
+    partial class TelaCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "TelaRequisitos";
-            this.Text = "TelaRequisitos";
+            this.Text = "00000";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TelaLogin.WindowsFormsApp
 {
-    public partial class TelaRequisitos : Form
+    public partial class TelaCadastro : Form
     {
-        public TelaRequisitos()
+        public TelaCadastro()
         {
             InitializeComponent();
         }
