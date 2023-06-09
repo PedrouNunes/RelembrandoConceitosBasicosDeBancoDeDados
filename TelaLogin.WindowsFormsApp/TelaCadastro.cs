@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace TelaLogin.WindowsFormsApp
@@ -34,6 +35,11 @@ namespace TelaLogin.WindowsFormsApp
                     command.ExecuteNonQuery();
                 }
                 MessageBox.Show("Registro Adicionado");
+                using (StreamWriter writer = new StreamWriter("log.txt", true))
+                {
+                    writer.WriteLine($"Usuário Adicionado: {usuario}, Data e Hora: {DateTime.Now}");
+                }
+
             }
             catch (Exception ex)
             {   

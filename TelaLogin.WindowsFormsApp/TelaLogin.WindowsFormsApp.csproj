@@ -66,11 +66,11 @@
     <Compile Include="Editar\TelaEdicaoFinal.Designer.cs">
       <DependentUpon>TelaEdicaoFinal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editar\TelaEditar.cs">
+    <Compile Include="Editar\TelaEscolha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar\TelaEditar.Designer.cs">
-      <DependentUpon>TelaEditar.cs</DependentUpon>
+    <Compile Include="Editar\TelaEscolha.Designer.cs">
+      <DependentUpon>TelaEscolha.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\TelaLogin.cs">
       <SubType>Form</SubType>
@@ -84,6 +84,9 @@
     <Compile Include="TelaCadastro.Designer.cs">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Editar\TelaEdicaoFinal.resx">
+      <DependentUpon>TelaEdicaoFinal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,8 +102,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Editar\TelaEditar.resx">
-      <DependentUpon>TelaEditar.cs</DependentUpon>
+    <EmbeddedResource Include="Editar\TelaEscolha.resx">
+      <DependentUpon>TelaEscolha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
