@@ -61,7 +61,6 @@ namespace TelaLogin.WindowsFormsApp
                     int rowsAffected = command.ExecuteNonQuery();
 
                     MessageBox.Show("\nUsuário atualizado com sucesso. Linhas afetadas: {0}");
-
                     using (StreamWriter writer = new StreamWriter("log.txt", true))
                     {
                         writer.WriteLine($"Usuário editado: {nomePesquisa}, Linhas afetadas: {rowsAffected}, Data e Hora: {DateTime.Now}");
