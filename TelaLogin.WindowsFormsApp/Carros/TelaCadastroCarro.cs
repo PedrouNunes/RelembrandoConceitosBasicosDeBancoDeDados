@@ -62,8 +62,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
                     command.Parameters.AddWithValue("@Modelo", modelo);
                     command.Parameters.AddWithValue("@Placa", placa);
                     command.Parameters.AddWithValue("@VendedorId", vendedorId);
-
-                    
                     command.ExecuteNonQuery();
                 }
 

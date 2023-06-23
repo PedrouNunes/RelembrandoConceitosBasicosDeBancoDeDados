@@ -52,7 +52,7 @@ namespace TelaLogin.WindowsFormsApp
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            TelaEscolha telaEditar = new TelaEscolha();
+            TelaEscolha telaEditar = new TelaEscolha(nomeLogin);
             telaEditar.Show();
             this.Hide();
 
@@ -67,7 +67,7 @@ namespace TelaLogin.WindowsFormsApp
 
         private void btnOpcoes_Click(object sender, EventArgs e)
         {
-            TelaOpcoesCarro telaOpcoesCarros = new TelaOpcoesCarro();
+            TelaOpcoesCarro telaOpcoesCarros = new TelaOpcoesCarro(nomeLogin);
             telaOpcoesCarros.Show();
             this.Hide();
         }

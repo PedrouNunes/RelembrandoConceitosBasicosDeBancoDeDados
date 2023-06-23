@@ -8,9 +8,11 @@ namespace TelaLogin.WindowsFormsApp
 {
     public partial class TelaEscolha : Form
     {
-        public TelaEscolha()
+        string nome;
+        public TelaEscolha(string nomeLogin)
         {
             InitializeComponent();
+            nome = nomeLogin;
         }
 
         private void btnEditar_Click(object sender, System.EventArgs e)
@@ -83,6 +85,13 @@ namespace TelaLogin.WindowsFormsApp
             {
                 connection.Close();
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            PaginaInicial paginaInicial = new PaginaInicial(nome);
+            paginaInicial.Show();
+            this.Hide();
         }
     }
 }

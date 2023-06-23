@@ -1,40 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TelaLogin.WindowsFormsApp.Carros
 {
     public partial class TelaOpcoesCarro : Form
     {
-        public TelaOpcoesCarro()
+        string nome;
+        public TelaOpcoesCarro(string nomeLogin)
         {
             InitializeComponent();
+            nome = nomeLogin;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             string placa = txtPlaca.Text;
 
-            TelaEdicaoCarro telaEdicaoCarro = new TelaEdicaoCarro(placa);
-            telaEdicaoCarro.Show();
-            this.Hide();
+            if (txtPlaca.Text != "")
+            {
+                TelaEdicaoCarro telaEdicaoCarro = new TelaEdicaoCarro(placa, nome);
+                telaEdicaoCarro.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Insira uma placa antes");
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+
             // Configurar a conexão com o banco de dados
             string connectionString = @"Data Source=(LocalDB)\MSSqlLocalDB;Initial Catalog=Login;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
 
-            // Solicitar o nome do usuário a ser pesquisado
             string placaPesquisa = txtPlaca.Text;
 
             // Consultar o usuário no banco de dados
@@ -79,7 +81,7 @@ namespace TelaLogin.WindowsFormsApp.Carros
                 }
                 else
                 {
-                    MessageBox.Show("Carro não encontrado.");
+                    MessageBox.Show("Placa não existente.");
                 }
             }
             catch (Exception ex)
@@ -90,6 +92,13 @@ namespace TelaLogin.WindowsFormsApp.Carros
             {
                 connection.Close();
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            PaginaInicial paginaInicial = new PaginaInicial(nome);
+            paginaInicial.Show();
+            this.Hide();
         }
     }
 }
