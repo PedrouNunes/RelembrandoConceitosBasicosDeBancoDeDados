@@ -60,7 +60,7 @@ namespace TelaLogin.WindowsFormsApp
 
         private void btnCadastrarCarros_Click(object sender, EventArgs e)
         {
-            TelaCadastroCarro telacadastroCarros = new TelaCadastroCarro();
+            TelaCadastroCarro telacadastroCarros = new TelaCadastroCarro(nomeLogin);
             telacadastroCarros.Show();
             this.Hide();
         }

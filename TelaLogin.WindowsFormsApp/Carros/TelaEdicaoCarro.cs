@@ -12,9 +12,11 @@ namespace TelaLogin.WindowsFormsApp.Carros
 {
     public partial class TelaEdicaoCarro : Form
     {
-        public TelaEdicaoCarro()
+        string placaCarro;
+        public TelaEdicaoCarro(string placa)
         {
             InitializeComponent();
+            this.placaCarro = placa;
         }
     }
 }

@@ -34,6 +34,8 @@
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtVendedor = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,18 +86,40 @@
             this.txtVendedor.Size = new System.Drawing.Size(100, 22);
             this.txtVendedor.TabIndex = 5;
             // 
-            // TelaCadastroCarros
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(43, 146);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 14;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(202, 146);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(92, 23);
+            this.btnCadastrar.TabIndex = 15;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // TelaCadastroCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 166);
+            this.ClientSize = new System.Drawing.Size(321, 188);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtVendedor);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TelaCadastroCarros";
+            this.Name = "TelaCadastroCarro";
             this.Text = "TelaCadastroCarros";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +134,7 @@
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtVendedor;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }
