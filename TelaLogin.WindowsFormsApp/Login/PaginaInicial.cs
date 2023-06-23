@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 
 using System.Windows.Forms;
+using TelaLogin.WindowsFormsApp.Carros;
 
 namespace TelaLogin.WindowsFormsApp
 {
@@ -55,6 +56,20 @@ namespace TelaLogin.WindowsFormsApp
             telaEditar.Show();
             this.Hide();
 
+        }
+
+        private void btnCadastrarCarros_Click(object sender, EventArgs e)
+        {
+            TelaCadastroCarro telacadastroCarros = new TelaCadastroCarro();
+            telacadastroCarros.Show();
+            this.Hide();
+        }
+
+        private void btnOpcoes_Click(object sender, EventArgs e)
+        {
+            TelaOpcoesCarro telaOpcoesCarros = new TelaOpcoesCarro();
+            telaOpcoesCarros.Show();
+            this.Hide();
         }
     }
 }

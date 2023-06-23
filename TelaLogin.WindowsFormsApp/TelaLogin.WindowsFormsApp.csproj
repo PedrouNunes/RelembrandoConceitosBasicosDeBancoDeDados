@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carros\TelaCadastroCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carros\TelaCadastroCarro.Designer.cs">
+      <DependentUpon>TelaCadastroCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carros\TelaOpcoesCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carros\TelaOpcoesCarro.Designer.cs">
+      <DependentUpon>TelaOpcoesCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carros\TelaEdicaoCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carros\TelaEdicaoCarro.Designer.cs">
+      <DependentUpon>TelaEdicaoCarro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +102,15 @@
     <Compile Include="TelaCadastro.Designer.cs">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Carros\TelaCadastroCarro.resx">
+      <DependentUpon>TelaCadastroCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carros\TelaOpcoesCarro.resx">
+      <DependentUpon>TelaOpcoesCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carros\TelaEdicaoCarro.resx">
+      <DependentUpon>TelaEdicaoCarro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editar\TelaEdicaoFinal.resx">
       <DependentUpon>TelaEdicaoFinal.cs</DependentUpon>
     </EmbeddedResource>
