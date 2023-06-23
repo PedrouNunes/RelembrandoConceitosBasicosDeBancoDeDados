@@ -16,7 +16,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
             InitializeComponent();
             this.placa = placaPesquisada;
             nomeLogin = nome;
-            novoVendedorId = ObterIdVendedorPeloNome(txtVendedor.Text);
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -50,6 +49,7 @@ namespace TelaLogin.WindowsFormsApp.Carros
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            novoVendedorId = ObterIdVendedorPeloNome(txtVendedor.Text);
             // Consultar o carros no banco de dados
             string connectionString = @"Data Source=(LocalDB)\MSSqlLocalDB;Initial Catalog=Login;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
