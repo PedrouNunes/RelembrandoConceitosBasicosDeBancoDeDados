@@ -93,5 +93,52 @@ namespace TelaLogin.WindowsFormsApp
             paginaInicial.Show();
             this.Hide();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string nomePesquisado = txtNovoNome.Text;
+
+            string connectionString = @"Data Source=(LocalDB)\MSSqlLocalDB;Initial Catalog=Login;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "SELECT * FROM dados WHERE Nome = @Nome";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Nome", nomePesquisado);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    // Mostrar os detalhes do carro encontrado
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string nome = reader.GetString(1);
+                        string senha = reader.GetString(2);
+
+                        Console.WriteLine("ID: {0}, Nome: {1}, Senha: {2}", id, nome, senha);
+
+                        MessageBox.Show("ID: " + id + "\n" +
+                        "Nome: " + nome + "\n" +
+                        "Senha: " + senha + "\n");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vendedor não encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
