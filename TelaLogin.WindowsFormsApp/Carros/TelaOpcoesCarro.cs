@@ -39,7 +39,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
 
             string placaPesquisa = txtPlaca.Text;
 
-            // Consultar o usuário no banco de dados
             string query = "SELECT * FROM carros WHERE Placa = @Placa";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Placa", placaPesquisa);
@@ -51,7 +50,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
 
                 if (reader.HasRows)
                 {
-                    // Mostrar os detalhes do usuário encontrado
                     while (reader.Read())
                     {
                         int id = reader.GetInt32(0);
@@ -64,7 +62,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
 
                     reader.Close();
 
-                    // Excluir o usuário do banco de dados
                     query = "DELETE FROM carros WHERE Placa = @Placa";
                     command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Placa", placaPesquisa);

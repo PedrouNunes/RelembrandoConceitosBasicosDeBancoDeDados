@@ -55,13 +55,6 @@ namespace TelaLogin.WindowsFormsApp
             }
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TelaCadastroVendedor telaRequisitos = new TelaCadastroVendedor();
-            telaRequisitos.Show();
-            this.Hide();
-        }
     }
     }
 

@@ -7,9 +7,11 @@ namespace TelaLogin.WindowsFormsApp
 {
     public partial class TelaCadastroVendedor : Form
     {
-        public TelaCadastroVendedor()
+        string nomeLogin;
+        public TelaCadastroVendedor(string nome)
         {
             InitializeComponent();
+            this.nomeLogin = nome;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace TelaLogin.WindowsFormsApp
                 conexao.Close();
             }
            
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            PaginaInicial paginaInicial = new PaginaInicial(nomeLogin);
+            paginaInicial.Show();
+            this.Hide();
         }
     }
 }

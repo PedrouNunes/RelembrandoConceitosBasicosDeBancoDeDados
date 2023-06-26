@@ -65,7 +65,6 @@ namespace TelaLogin.WindowsFormsApp.Carros
 
                 if (reader.HasRows)
                 {
-                    // Mostrar os detalhes do usuário encontrado
                     while (reader.Read())
                     {
                         int id = reader.GetInt32(0);
@@ -76,14 +75,12 @@ namespace TelaLogin.WindowsFormsApp.Carros
                         Console.WriteLine("ID: {0}, Modelo: {1}, Placa: {2}, VendedorId: {3}", id, modelo, placa, vendedorId);
                     }
 
-                    // Solicitar novos dados para atualizar o usuário
 
                     string novoModelo = txtModelo.Text;
 
                     string novaPlaca = txtPlaca.Text;
 
 
-                    // Atualizar o carro no banco de dados
                     query = "UPDATE carros SET Modelo = @NovoModelo, Placa = @NovaPlaca, Vendedor_Id = @NovoVendedorId WHERE Placa = @Placa";
                     command = new SqlCommand(query, conexao);
                     command.Parameters.AddWithValue("@NovoModelo", novoModelo);

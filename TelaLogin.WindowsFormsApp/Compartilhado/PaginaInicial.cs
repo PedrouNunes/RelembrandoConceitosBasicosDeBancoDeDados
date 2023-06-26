@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-
 using System.Windows.Forms;
 using TelaLogin.WindowsFormsApp.Carros;
 
@@ -18,7 +17,7 @@ namespace TelaLogin.WindowsFormsApp
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            TelaCadastroVendedor telaRequisitos = new TelaCadastroVendedor();
+            TelaCadastroVendedor telaRequisitos = new TelaCadastroVendedor(nomeLogin);
             telaRequisitos.Show();
             this.Hide();
         }
