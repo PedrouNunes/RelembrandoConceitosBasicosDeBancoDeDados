@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace TelaLogin.WindowsFormsApp
 {
-    public partial class TelaCadastro : Form
+    public partial class TelaCadastroVendedor : Form
     {
-        public TelaCadastro()
+        public TelaCadastroVendedor()
         {
             InitializeComponent();
         }

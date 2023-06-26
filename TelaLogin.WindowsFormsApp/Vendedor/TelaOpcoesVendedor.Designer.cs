@@ -1,6 +1,6 @@
 ﻿namespace TelaLogin.WindowsFormsApp
 {
-    partial class TelaEscolha
+    partial class TelaOpcoesVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(200, 80);
+            this.btnEditar.Location = new System.Drawing.Point(247, 86);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // txtNovoNome
             // 
-            this.txtNovoNome.Location = new System.Drawing.Point(108, 38);
+            this.txtNovoNome.Location = new System.Drawing.Point(155, 44);
             this.txtNovoNome.Name = "txtNovoNome";
             this.txtNovoNome.Size = new System.Drawing.Size(100, 22);
             this.txtNovoNome.TabIndex = 1;
@@ -55,15 +55,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 9);
+            this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 16);
+            this.label1.Size = new System.Drawing.Size(373, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Digite o nome que você deseja editar ou excluir";
+            this.label1.Text = "Digite o nome do vendedor que você deseja editar ou excluir:";
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(108, 80);
+            this.btnExcluir.Location = new System.Drawing.Point(155, 86);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(12, 80);
+            this.btnVoltar.Location = new System.Drawing.Point(59, 86);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 4;
@@ -81,17 +81,17 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // TelaEscolha
+            // TelaOpcoesVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 133);
+            this.ClientSize = new System.Drawing.Size(390, 133);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNovoNome);
             this.Controls.Add(this.btnEditar);
-            this.Name = "TelaEscolha";
+            this.Name = "TelaOpcoesVendedor";
             this.Text = "TelaEditar";
             this.ResumeLayout(false);
             this.PerformLayout();

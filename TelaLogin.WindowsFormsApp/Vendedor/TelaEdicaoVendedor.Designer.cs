@@ -1,6 +1,6 @@
 ﻿namespace TelaLogin.WindowsFormsApp
 {
-    partial class TelaEdicaoFinal
+    partial class TelaEdicaoVendedor
     {
         /// <summary>
         /// Required designer variable.
