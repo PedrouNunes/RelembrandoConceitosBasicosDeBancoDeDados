@@ -97,5 +97,55 @@ namespace TelaLogin.WindowsFormsApp.Carros
             paginaInicial.Show();
             this.Hide();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string placaPesquisada = txtPlaca.Text;
+
+            // Consultar o carro no banco de dados
+            string connectionString = @"Data Source=(LocalDB)\MSSqlLocalDB;Initial Catalog=Login;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "SELECT * FROM carros WHERE Placa = @Placa";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Placa", placaPesquisada);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    // Mostrar os detalhes do carro encontrado
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string modelo = reader.GetString(1);
+                        string placa = reader.GetString(2);
+                        int vendedorId = reader.GetInt32(3);
+
+                        Console.WriteLine("ID: {0}, Modelo: {1}, Placa: {2}, VendedorId: {3}", id, modelo, placa, vendedorId);
+
+                        MessageBox.Show("ID: " + id + "\n" +
+                        "Modelo: " + modelo + "\n" +
+                        "Placa: " + placa + "\n" +
+                        "VendedorId: " + vendedorId);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Carro não encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
