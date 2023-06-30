@@ -40,6 +40,10 @@ namespace TelaLogin.WindowsFormsApp
                     {
                         command.ExecuteNonQuery();
                         MessageBox.Show("Usuário desconectado");
+                        Home telaHome = new Home();
+                        telaHome.Show();
+                        this.Hide();
+
                     }
                 }
             }
